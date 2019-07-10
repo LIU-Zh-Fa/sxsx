@@ -7,6 +7,15 @@
     <router-view/>
   </div>
 </template>
+<script>
+export default {
+    created(){
+        this.$axios.get("/sz/Home/FlashSaleRequest?accesstoken=06955f3787634eb1&customerguid=a201b705-5964-4970-99c2-eee9c859229e&sourcetype=9").then((res)=>{
+            console.log(res)
+        })
+    }
+}
+</script>
 
 <style>
 #app {
